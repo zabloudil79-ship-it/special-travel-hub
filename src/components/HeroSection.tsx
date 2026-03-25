@@ -1,20 +1,35 @@
 import { motion } from "framer-motion";
 import { Plane } from "lucide-react";
-import heroImage from "@/assets/hero-beach.jpg";
 import { useLang } from "@/context/LangContext";
 
 const HeroSection = () => {
   const { t } = useLang();
 
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row">
-      <div className="lg:w-1/2 flex flex-col justify-center p-8 md:p-12 lg:p-16 xl:p-24 bg-background relative z-10">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Full-screen background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/hero-video.mov" type="video/quicktime" />
+      </video>
+
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-foreground/50 z-[1]" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-12 lg:px-24 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center"
         >
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-12">
             <div className="w-14 h-14 rounded-full border-2 border-primary flex items-center justify-center">
               <Plane className="w-7 h-7 text-primary -rotate-45" />
             </div>
@@ -27,13 +42,13 @@ const HeroSection = () => {
 
           <div className="w-24 h-[2px] bg-primary mb-8" />
 
-          <h1 className="font-heading text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-6 text-foreground">
+          <h1 className="font-heading text-3xl md:text-5xl xl:text-6xl font-semibold leading-tight mb-6 text-white">
             {t("hero.headline1")}
             <br />
             <span className="italic text-primary">{t("hero.headline2")}</span>
           </h1>
 
-          <p className="font-body text-muted-foreground text-base md:text-lg font-light leading-relaxed max-w-lg mb-10">
+          <p className="font-body text-white/80 text-base md:text-lg font-light leading-relaxed max-w-lg mb-10">
             {t("hero.subtitle")}
           </p>
 
@@ -44,20 +59,6 @@ const HeroSection = () => {
             {t("hero.cta")}
           </a>
         </motion.div>
-      </div>
-
-      <div className="lg:w-1/2 min-h-[60vh] lg:min-h-screen relative overflow-hidden">
-        <motion.img
-          src={heroImage}
-          alt="Exclusive beach destination"
-          className="w-full h-full object-cover"
-          width={1024}
-          height={1536}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
       </div>
     </section>
   );
