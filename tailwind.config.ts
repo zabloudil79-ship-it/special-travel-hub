@@ -13,11 +13,18 @@ export default {
       },
     },
     fontFamily: {
-      heading: ['Cormorant Garamond', 'serif'],
+      heading: ['Playfair Display', 'serif'],
       body: ['Raleway', 'sans-serif'],
     },
     extend: {
       colors: {
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+        teal: "hsl(var(--teal))",
+        cream: "hsl(var(--cream))",
+        dark: "hsl(var(--dark))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

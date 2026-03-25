@@ -6,41 +6,47 @@
 All colors MUST be HSL.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@200;300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 10% 15%;
+    --background: 40 20% 98%;
+    --foreground: 220 20% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 10% 15%;
+    --card: 40 15% 97%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 15%;
+    --popover-foreground: 220 20% 12%;
 
-    --primary: 174 42% 51%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 35 60% 42%;
+    --primary-foreground: 40 20% 98%;
 
-    --secondary: 180 15% 95%;
-    --secondary-foreground: 210 10% 15%;
+    --secondary: 40 15% 93%;
+    --secondary-foreground: 220 20% 12%;
 
-    --muted: 180 10% 96%;
-    --muted-foreground: 210 5% 45%;
+    --muted: 40 10% 93%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 174 42% 51%;
+    --accent: 174 35% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 10% 90%;
-    --input: 180 10% 90%;
-    --ring: 174 42% 51%;
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 35 60% 42%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --font-heading: 'Cormorant Garamond', serif;
+    --gold: 35 60% 42%;
+    --gold-light: 40 50% 70%;
+    --teal: 174 35% 45%;
+    --cream: 40 20% 98%;
+    --dark: 220 20% 12%;
+
+    --font-heading: 'Playfair Display', serif;
     --font-body: 'Raleway', sans-serif;
 
     --sidebar-background: 0 0% 98%;
@@ -50,7 +56,7 @@ All colors MUST be HSL.
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 174 42% 51%;
+    --sidebar-ring: 35 60% 42%;
   }
 
   .dark {
