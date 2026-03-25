@@ -132,6 +132,29 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "IATA registered travel agency with full insurance.",
   },
 
+  // Contact
+  "contact.label": { cs: "Napište nám", en: "Get in touch" },
+  "contact.title": { cs: "Kontaktní formulář", en: "Contact form" },
+  "contact.subtitle": {
+    cs: "Máte zájem o nezapomenutelnou cestu? Napište nám a my se vám ozveme s nabídkou na míru.",
+    en: "Interested in an unforgettable journey? Write to us and we'll get back to you with a tailored offer.",
+  },
+  "contact.name.label": { cs: "Jméno", en: "Name" },
+  "contact.name.placeholder": { cs: "Vaše jméno", en: "Your name" },
+  "contact.email.label": { cs: "E-mail", en: "Email" },
+  "contact.email.placeholder": { cs: "Váš e-mail", en: "Your email" },
+  "contact.phone.label": { cs: "Telefon", en: "Phone" },
+  "contact.phone.placeholder": { cs: "Váš telefon (volitelné)", en: "Your phone (optional)" },
+  "contact.message.placeholder": { cs: "Vaše zpráva...", en: "Your message..." },
+  "contact.submit": { cs: "Odeslat zprávu", en: "Send message" },
+  "contact.sending": { cs: "Odesílání...", en: "Sending..." },
+  "contact.emailSubject": { cs: "Poptávka z webu Special Travel", en: "Inquiry from Special Travel website" },
+  "contact.success.title": { cs: "Odesláno!", en: "Sent!" },
+  "contact.success.desc": {
+    cs: "Vaše zpráva byla připravena k odeslání. Děkujeme!",
+    en: "Your message has been prepared for sending. Thank you!",
+  },
+
   // Footer
   "footer.desc": {
     cs: "Exkluzivní cestovní agentura pro individuální cesty na míru. Více než 20 let zkušeností v oboru luxusního cestování.",

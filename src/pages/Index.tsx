@@ -16,6 +16,7 @@ const Index = () => {
         <ServicesSection />
         <DestinationsSection />
         <AboutSection />
+        <ContactSection />
         <FooterSection />
       </main>
     </LangProvider>
