@@ -1,11 +1,13 @@
 import { Plane } from "lucide-react";
+import { useLang } from "@/context/LangContext";
 
 const FooterSection = () => {
+  const { t } = useLang();
+
   return (
     <footer className="bg-dark text-cream py-20">
       <div className="max-w-7xl mx-auto px-8 md:px-12">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full border border-gold-light flex items-center justify-center">
@@ -18,14 +20,12 @@ const FooterSection = () => {
               </div>
             </div>
             <p className="font-body text-sm text-cream/60 font-light leading-relaxed">
-              Exkluzivní cestovní agentura pro individuální cesty na míru.
-              Více než 20 let zkušeností v oboru luxusního cestování.
+              {t("footer.desc")}
             </p>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-gold-light mb-4">Kontakt</h3>
+            <h3 className="font-heading text-lg font-semibold text-gold-light mb-4">{t("footer.contact")}</h3>
             <div className="font-body text-sm text-cream/70 font-light space-y-1">
               <p className="font-medium text-cream/90">SPECIAL TRAVEL</p>
               <p>ppm factum a.s.</p>
@@ -40,25 +40,19 @@ const FooterSection = () => {
             </div>
           </div>
 
-          {/* Legal */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-gold-light mb-4">Právní informace</h3>
+            <h3 className="font-heading text-lg font-semibold text-gold-light mb-4">{t("footer.legal")}</h3>
             <div className="font-body text-sm text-cream/70 font-light space-y-1">
-              <p>IATA číslo registrace: 96220541</p>
-              <p>Registrovaná cestovní agentura</p>
-              <p>Plné pojištění cestovní kanceláře</p>
+              <p>{t("footer.iata")}</p>
+              <p>{t("footer.registered")}</p>
+              <p>{t("footer.insurance")}</p>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="border-t border-cream/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-heading text-base italic text-cream/50">
-            Žádné místo na zemi není téměř nemožné.
-          </p>
-          <p className="font-body text-xs text-cream/30">
-            © {new Date().getFullYear()} Special Travel. Všechna práva vyhrazena.
-          </p>
+          <p className="font-heading text-base italic text-cream/50">{t("footer.motto")}</p>
+          <p className="font-body text-xs text-cream/30">© {new Date().getFullYear()} {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
