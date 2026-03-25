@@ -15,7 +15,7 @@ const HeroSection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/hero-video.mov" type="video/quicktime" />
+        <source src="/hero-video.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay for text readability */}
